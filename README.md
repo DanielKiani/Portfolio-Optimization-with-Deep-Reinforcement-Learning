@@ -16,7 +16,8 @@ This is **Version 1.0** of the project, which moves beyond initial exploration t
 The dashboard integrates **Large Language Models (LLMs)**, specifically `Qwen/Qwen2.5-3B-Instruct`, to act as an AI Risk Analyst, providing textual justification and risk assessments for the RL agent's proposed strategies.
 
 *You try the webapp here ->* [Gradio webapp](https://huggingface.co/spaces/DanielKiani/Portfolio-Optimization-with-Deep-Reinforcement-Learning)
-> 🛑  *Due to the hardware constraints in the free tier of Huggingface i had to use a smaller LLM `Qwen/Qwen2.5-1.5B-Instruct` instead of `Qwen/Qwen2.5-3B-Instruct` even with this change the LLM analysis aspects will take a while to run so if you want to try the whole experience let the app run in the background and come back to it after a while.* 🛑
+> 🛑  *Due to the hardware constraints in the free tier of Huggingface i had to use a smaller LLM (`Qwen/Qwen2.5-1.5B-Instruct` instead of `Qwen/Qwen2.5-3B-Instruct`) even with this change the LLM analysis aspects will take a while to run so if you want to try the whole experience let the app run in the background and come back to it after a while.* 🛑
+> 🛑 My agent was trained on the data from the start of 2015 untill the end of 2020 so if we were to use it to generate allocations for let's say tomorrow we would retrain the model on the new data. 🛑
 
 ---
 
@@ -107,10 +108,6 @@ The **Soft Actor-Critic (SAC)** agent confirmed its role as the high-growth stra
 * **Highest Returns:** It achieved the highest Total Return (**39.23%**) and CAGR (**12.25%**), outperforming the Buy & Hold baseline by a significant margin.
 * **Higher Risk:** This performance came at the cost of the highest volatility (**27.47%**), making it a strategy suited for aggressive investors willing to tolerate larger price swings for maximum gain.
 
-### 📉 The Failure of Standard Architectures
-
-Interestingly, the standard Multi-Layer Perceptron (MLP) versions of PPO and TD3 failed to beat the simple Buy & Hold baseline. They suffered the lowest returns and the deepest drawdowns. This stark contrast with the success of the Transformer model highlights that for complex financial time-series, **network architecture is just as critical, if not more so, than the choice of RL algorithm itself.**
-
 ---
 
 ## 🧠 Comparative Analysis of Agent Strategies
@@ -173,6 +170,7 @@ The dashboard integrates **Large Language Models (LLMs)**, specifically Qwen, to
 
 *You try the webapp here ->* [Gradio webapp](https://huggingface.co/spaces/DanielKiani/Portfolio-Optimization-with-Deep-Reinforcement-Learning)
 > 🛑  *Due to the hardware constraints in the free tier of Huggingface i had to use a smaller LLM (`Qwen/Qwen2.5-1.5B-Instruct` instead of `Qwen/Qwen2.5-3B-Instruct` ) even with this change the LLM analysis aspects will take a while to run so if you want to try the whole experience let the app run in the background and come back to it after a while.* 🛑
+> 🛑 My agent was trained on the data from the start of 2015 untill the end of 2020 so if we were to use it to generate allocations for let's say tomorrow we would retrain the model on the new data. 🛑
 
 ### Key Features:
 
