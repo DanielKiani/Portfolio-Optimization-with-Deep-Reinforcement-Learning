@@ -13,9 +13,10 @@ This is **Version 1.0** of the project, which moves beyond initial exploration t
 * **In-Depth Analysis:** We delve into *why* certain agents perform better, visualizing their asset allocation strategies over time to uncover their "investment philosophy."
 
 * **Deep RL & LLM Portfolio Manager (Web App):**  A key feature of v1.0 is the interactive web application built with **Gradio**. This dashboard bridges the gap between complex backend models and user-friendly analysis, allowing for live tracking, forward-looking strategy generation, and historical backtesting.
-The dashboard integrates **Large Language Models (LLMs)**, specifically Qwen, to act as an AI Risk Analyst, providing textual justification and risk assessments for the RL agent's proposed strategies.
+The dashboard integrates **Large Language Models (LLMs)**, specifically `Qwen/Qwen2.5-3B-Instruct`, to act as an AI Risk Analyst, providing textual justification and risk assessments for the RL agent's proposed strategies.
 
 *You try the webapp here ->* [Gradio webapp](https://huggingface.co/spaces/DanielKiani/Portfolio-Optimization-with-Deep-Reinforcement-Learning)
+> 🛑  *Due to the hardware constraints in the free tier of Huggingface i had to use a smaller LLM `Qwen/Qwen2.5-1.5B-Instruct` instead of `Qwen/Qwen2.5-3B-Instruct` even with this change the LLM analysis aspects will take a while to run so if you want to try the whole experience let the app run in the background and come back to it after a while.* 🛑
 
 ---
 
@@ -170,6 +171,9 @@ A key feature of v1.0 is the interactive web application built with **Gradio**. 
 
 The dashboard integrates **Large Language Models (LLMs)**, specifically Qwen, to act as an AI Risk Analyst, providing textual justification and risk assessments for the RL agent's proposed strategies.
 
+*You try the webapp here ->* [Gradio webapp](https://huggingface.co/spaces/DanielKiani/Portfolio-Optimization-with-Deep-Reinforcement-Learning)
+> 🛑  *Due to the hardware constraints in the free tier of Huggingface i had to use a smaller LLM (`Qwen/Qwen2.5-1.5B-Instruct` instead of `Qwen/Qwen2.5-3B-Instruct` ) even with this change the LLM analysis aspects will take a while to run so if you want to try the whole experience let the app run in the background and come back to it after a while.* 🛑
+
 ### Key Features:
 
 #### 1. Live Dashboard & Net Worth Tracking
@@ -184,13 +188,19 @@ Generate tomorrow's optimal portfolio allocation using the trained RL agents. Th
 
 It also includes **Explainable AI (XAI)** feature importance plots to show which market factors most influenced the agent's decision.
 
-![AI Forecast and Risk Analysis](assets/tab2.png)
+![AI Forecast and Risk Analysis](results/tab2.png)
 
-#### 3. Historical Simulation & Backtesting
+#### 3. AI-Driven Historical Market Analyst
+
+Compare the historical performance of selected assets over customizable timeframes (e.g., 6 months, 5 years) with normalized relative return plots. The system generates an AI Analyst Report that summarizes key **trends**, **volatility**, and comparative performance for the selected period, providing narrative context to the raw data.
+
+![AI-Driven Historical Market Analyst](results/tab3.png)
+
+#### 4. Historical Simulation & Backtesting
 
 Run dynamic backtests of the trained RL agents against baselines over any historical period. This tool is essential for validating performance across different market cycles.
 
-![Historical Simulation](assets/tab2.png)
+![Historical Simulation](results/tab4.png)
 
 ---
 
